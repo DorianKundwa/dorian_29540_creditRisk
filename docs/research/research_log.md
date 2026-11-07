@@ -1,0 +1,13 @@
+# Phase 0 Research Log – creditRisk (INSY 8311)
+
+- **Student:** Turashimye Kundwa Dorian (ID: 29540)
+- **Project:** Credit Risk Monitoring and Default Alert System (`creditRisk`)
+
+| # | Source (APA) | Type | Link | Key finding | Gap it shows |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | Ndikubwimana, P., et al. (2023). Credit risk analysis and microfinance loan quality in Rwanda: A case study of COPEDU Ltd. *ResearchGate*. | Research Paper | https://www.researchgate.net/publication/372428843 | Weak loan screening and manual borrower follow-up cause 66.7% of non-performing loans in microfinance institutions. | Lenders need database triggers that automatically block high-risk loan applications before approval. |
+| 2 | National Bank of Rwanda. (2021). *Assessing the systemic importance of banks in Rwanda* (BNR Economic Review, Vol. 17). | Research Paper | https://www.bnr.rw/ | Unmonitored loan concentration across specific lending categories increases default risk across banks. | Shows the need for a live dashboard that breaks down default rates by loan category and grade. |
+| 3 | Rwanda Bankers' Association. (2024). *State of the banking industry report 2024*. | Report / Statistic | https://rba.rw/ | Reports on non-performing loan ratios in Rwanda and shows that credit risk remains the largest risk area for local lenders. | Confirms that manual spreadsheet checks are not enough to keep default rates down as loan numbers grow. |
+| 4 | Mifos Initiative. (2024). *Mifos X open-source core banking system documentation*. | Existing System | https://mifos.org/ | Provides basic loan account tracking for SACCOs and microfinance institutions. | Does not include custom Oracle PL/SQL triggers to block loans over a 50% debt-to-income ratio or direct Power BI audit reporting. |
+| 5 | Lao Tse. (2020). *Credit risk dataset* [Data set]. Kaggle. | Dataset | https://www.kaggle.com/datasets/laotse/credit-risk-dataset | Contains 32,581 credit bureau records with 12 columns including income, home ownership, loan intent, loan grade, interest rate, debt-to-income ratio, and default status. | All borrower, credit grade, and loan fields are stored together in one flat CSV with some outliers, so it needs cleaning and 3NF normalization. |
+| 6 | Oracle Corporation. (2024). *Oracle Database PL/SQL language reference (21c)*. Oracle Help Center. | Technical Source | https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/ | Explains how PL/SQL packages, functions, explicit cursors, and BEFORE INSERT triggers work in Oracle Database. | Gives the technical structure needed to build `pkg_credit_risk` and `trg_block_high_dti_loan`. |
