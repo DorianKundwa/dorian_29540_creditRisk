@@ -52,3 +52,15 @@ To build an Oracle Pluggable Database (PDB) with PL/SQL that stores borrower cre
 - Ndikubwimana, P., et al. (2023). Credit risk analysis and microfinance loan quality in Rwanda: A case study of COPEDU Ltd. *ResearchGate*. https://www.researchgate.net/publication/372428843
 - Oracle Corporation. (2024). *Oracle Database PL/SQL language reference (21c)*. Oracle Help Center. https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/
 - Rwanda Bankers' Association. (2024). *State of the banking industry report 2024*. https://rba.rw/
+
+---
+
+## Phase I - Business Process Modeling
+
+- **Selected Business Process:** Loan Application Appraisal, Credit Risk Scoring, and Approval Process. This process models how a borrower's loan request moves from the Loan Officer to the Oracle PL/SQL database (`creditRisk`), where database triggers check the 50% debt-to-income limit (`trg_block_high_dti_loan`), stored functions calculate a 0–100 credit risk score (`fn_get_borrower_risk_score`), and high-risk loans are routed to the Credit Risk Manager for final approval or rejection.
+- **Modeling Tool Used:** diagrams.net (draw.io)
+- **Published Diagram Link:** [View Live Business Process Diagram (draw.io)](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=business_process_diagram.drawio&dark=auto#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1EyH7Ir1OMKoNtrxKRm974HiDk91yeV2u%26export%3Ddownload#%7B%22pageId%22%3A%22x5Mg_HvT1OX1keGA3UqA%22%7D)
+- **Supporting Documents:**
+  - [Business Process Diagram (PDF)](docs/business_process/business_process_diagram.pdf)
+  - [Business Process Explanation (PDF)](docs/business_process/business_process_explanation.pdf)
+
